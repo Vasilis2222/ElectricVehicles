@@ -31,7 +31,7 @@ and ev.parameter = 'EV sales'
 and ev.region = 'World'
 Group By ec.region, ec.[year], eb.region, eb.[year], et.region, et.[year], ev.region, ev.[year]
 
-![Στιγμιότυπο οθόνης 2024-02-20 151803](https://github.com/Vasilis2222/ElectricVehicles/assets/146919990/53d6dad7-3110-4a4b-9e9a-f7d826f328b1)
+
 
   
 --Worldwide cars seem to have the higher numbers. How about the EU?
