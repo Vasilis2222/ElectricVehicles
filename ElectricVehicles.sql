@@ -31,6 +31,9 @@ and ev.parameter = 'EV sales'
 and ev.region = 'World'
 Group By ec.region, ec.[year], eb.region, eb.[year], et.region, et.[year], ev.region, ev.[year]
 
+![Στιγμιότυπο οθόνης 2024-02-20 151803](https://github.com/Vasilis2222/ElectricVehicles/assets/146919990/53d6dad7-3110-4a4b-9e9a-f7d826f328b1)
+
+  
 --Worldwide cars seem to have the higher numbers. How about the EU?
 
 Select ec.region, ec.[year], SUM(Distinct(ec.[value])) AS Cars,
@@ -139,12 +142,12 @@ From EV_Sales_Percentage_Growth_EU
 -- In the next query we will explore what is the oil displacement in million lge over the years from all type of vehicles.
 
 -- LGE
--- The abbreviation �lge� stands for �liters of gasoline equivalent.� It is commonly used to express the energy content or consumption of alternative fuels or electric vehicles in terms comparable to traditional 
+-- The abbreviation “lge” stands for “liters of gasoline equivalent.” It is commonly used to express the energy content or consumption of alternative fuels or electric vehicles in terms comparable to traditional 
 -- gasoline. For example, when discussing the energy capacity of an electric vehicle battery, we might refer to it as having a certain number of liters of gasoline equivalent (lge) to provide a meaningful 
 -- comparison with internal combustion engine vehicles.
 
 -- Keep in mind that the calculations are for million lge.
--- So if for example there is an LGE value of 100 it means 100.000.000 �liters of gasoline equivalent�.
+-- So if for example there is an LGE value of 100 it means 100.000.000 “liters of gasoline equivalent”.
 
 Select ec.region, ec.[year], ec.parameter, SUM(Distinct(ec.[value])) AS LGE_Cars,
 Round(SUM(Distinct(ev.[value])), 1) AS LGE_Vans,
