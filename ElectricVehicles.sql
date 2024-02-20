@@ -31,15 +31,7 @@ and ev.parameter = 'EV sales'
 and ev.region = 'World'
 Group By ec.region, ec.[year], eb.region, eb.[year], et.region, et.[year], ev.region, ev.[year]
 
-
-  
-  ![EV_Sales_World](https://github.com/Vasilis2222/ElectricVehicles/assets/146919990/69d5ad7e-a364-498d-aa89-0acde8e47693)
-
-  
-
-  
-  
-  --Worldwide cars seem to have the higher numbers. How about the EU?
+-- Worldwide cars seem to have the higher numbers. How about the EU?
 
 Select ec.region, ec.[year], SUM(Distinct(ec.[value])) AS Cars,
 SUM(Distinct(ev.[value])) AS Vans,
